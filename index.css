@@ -6,7 +6,7 @@ body {
 footer {
     text-align: center;
     background-color: black;
-    margin: none;
+    margin-left: 0;
 }
 
 #greet {
@@ -51,7 +51,9 @@ div img {
 
 button {
     border-radius: 5px;
-    background-color: rgb(255, 255, 7);
+    background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
+    animation: slidernbw 5s linear infinite;
+    color: rgb(0, 0, 0);
     border: 1px solid rgb(83, 83, 83);
     padding: 10px;
     margin: 10px;
@@ -62,16 +64,25 @@ button {
 
 button:hover{
     transform: scale(1.2);
-    color: rgb(3, 46, 190);
+    color: white;
 }
 
+@keyframes slidernbw {
+    to {
+     background-position: 20vw;
+    }
+   }
+
 .buttadv {
-    color: white;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: normal;
     font-size: 45px;
     margin-top: 200px;
+    background: linear-gradient(90deg, #156983 20%, #bea748 50%, #e6274d 75%, #156983 50%);
+    animation: slidernbw 2s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -87,6 +98,10 @@ h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
     font-weight: lighter;
+}
+
+#footerdesc {
+    margin-left: 0;
 }
 
 @media (max-width: 500px) {
