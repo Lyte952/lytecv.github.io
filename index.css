@@ -1,216 +1,461 @@
 body {
-    background: rgb(2, 2, 46);
-    margin: 0;
+  background: rgb(2, 2, 46);
+  margin: 0;
+}
+
+#container-stars1 {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+#glow1 {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle1 {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle1:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle1:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.circle1 {
+  background: #FE53BB;
+}
+
+#stars1 {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars1::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars1::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -90%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars1::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
 }
 
 footer {
-    text-align: center;
-    background-color: black;
-    margin-left: 0;
+  text-align: center;
+  background-color: black;
+  margin-bottom: 5px;
 }
 
-#greet {
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    margin-top: 50px;
+.btn {
+  margin-left: 32%;
+  margin-top: 50px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 3rem;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#container-stars {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 5px;
+  color: #FFFFFF;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btn:hover {
+  transform: scale(1.1)
+}
+
+.btn:active {
+  border: double 4px #FE53BB;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #FE53BB;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
 
 #myname {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 200;
-    font-size: 45px;
-    color: white;
-    margin-left: 15px;
-    margin-top: 10px;
-    margin-bottom:10px;
-    display: flex;
-    text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  font-size: 45px;
+  color: white;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom:10px;
+  display: flex;
+  text-align: left;
 }
 
 #namebuttimg {
-    margin-top: 150px;
-    margin-left: 50px;
-    margin-right: 50px;
+  margin-top: 150px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 #top-buttons {
-    text-align: center;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    margin-top: 5px;
+  text-align: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-top: 5px;
 }
 
 div img {
-    height: 180px;
-    width: 200px;
-    border-radius: 50px;
-    margin-right: 20px;
-    margin-top: 20px;
+  height: 180px;
+  width: 200px;
+  border-radius: 50px;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .spinner {
-    width: 3em;
-    height: 3em;
-    position: absolute;
-    cursor: not-allowed;
-    border-radius: 50%;
-    border: 2px solid #444;
-    box-shadow: -10px -10px 10px #6359f8, 0px -10px 10px 0px #9c32e2, 10px -10px 10px #f36896, 10px 0 10px #ff0b0b, 10px 10px 10px 0px#ff5500, 0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700;
-    animation: rot55 0.7s linear infinite;
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  cursor: not-allowed;
+  border-radius: 50%;
+  border: 2px solid #444;
+  box-shadow: -10px -10px 10px #6359f8, 0px -10px 10px 0px #9c32e2, 10px -10px 10px #f36896, 10px 0 10px #ff0b0b, 10px 10px 10px 0px#ff5500, 0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700;
+  animation: rot55 0.7s linear infinite;
+}
+
+.spinnerin {
+  border: 2px solid #444;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rot55 {
+  to {
+    transform: rotate(360deg);
   }
-  
-  .spinnerin {
-    border: 2px solid #444;
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  @keyframes rot55 {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
+}
+
 
 button {
-    cursor: pointer;
-    color: #fff;
-    font-size: 17px;
-    border-radius: 1rem;
-    border: none;
-    position: relative;
-    background: #100720;
-    transition: 0.1s;
-  }
-  
-  button::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-    filter: blur(15px);
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  
-  button:active {
-    transform: scale(0.9) rotate(3deg);
-    background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-    transition: 0.5s;
-  }
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 1rem;
+  border: none;
+  position: relative;
+  background: #100720;
+  transition: 0.1s;
+}
 
+button::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+  filter: blur(15px);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+button:active {
+  transform: scale(0.9) rotate(3deg);
+  background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+  transform: scale(1);
+}
 button {
-    border-radius: 5px;
-    background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
-    animation: slidernbw 5s linear infinite;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(83, 83, 83);
-    padding: 10px;
-    margin: 10px;
-    transform: scale(1);
-    transition: 0.2s;
-    text-align: center;
+  border-radius: 5px;
+  background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
+  animation: slidernbw 5s linear infinite;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(83, 83, 83);
+  padding: 10px;
+  margin: 10px;
+  transform: scale(1);
+  transition: 0.2s;
+  text-align: center;
 }
 
 button:hover{
-    color: white;
-    transform: scale(1.2);
+  color: white;
+  transform: scale(1.2);
 }
 
 @keyframes slidernbw {
-    to {
-     background-position: 20vw;
-    }
-   }
+  to {
+   background-position: 20vw;
+  }
+ }
 
 .buttadv {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: normal;
-    font-size: 45px;
-    margin-top: 200px;
-    background: linear-gradient(90deg, #156983 20%, #bea748 50%, #e6274d 75%, #156983 50%);
-    animation: slidernbw 2s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: normal;
+  font-size: 45px;
+  margin-top: 200px;
+  background: linear-gradient(90deg, #156983 20%, #bea748 50%, #e6274d 75%, #156983 50%);
+  animation: slidernbw 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-    font-size: 40px;
-    font-weight: 200;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 40px;
+  font-weight: 200;
 }
 
 .pagedesc {
-    margin-left: 20px;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    font-weight: lighter;
+  margin-left: 15px;
+  margin-right: 20px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
 }
 
 #footerdesc {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 @media (max-width: 500px) {
-    #myname {
-      margin-right: 0;
-      margin-top: 20px;
-      margin-left: 10px;
-      margin-bottom: 0;
-      font-size: 23px;
-      font-weight: 200;
-    }
-
-    .buttadv {
-        font-size: 25px;
-        margin-top: 50px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .spinner {
-        width: 2em;
-        height: 2em;
-    }
-
-    .pagedesc {
-        font-size: 15px;
-    }
-
-    #greet{
-        font-size: 20px;
-    }
-
-    div img {
-        height: 160px;
-        margin-right: 10px;
-    }
-
-    #namebuttimg {
-        margin-top: 50px;
-    }
-
-    #namebutt {
-        margin-right: 10px;
-    }
-
-    button {
-        height: 30px;
-        width: 50px;
-        font-size: 9px;
-        padding: 3px;
-    }
+  #myname {
+    margin-right: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-size: 23px;
+    font-weight: 200;
   }
+
+  .buttadv {
+      font-size: 25px;
+      margin-top: 50px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  .btn {
+    width: 18rem;
+  }
+
+  .spinner {
+      width: 2em;
+      height: 2em;
+  }
+
+  .pagedesc {
+      font-size: 15px;
+  }
+
+  #greet{
+      font-size: 20px;
+      margin-top: 100px;
+  }
+
+  div img {
+      height: 160px;
+      margin-right: 10px;
+  }
+
+  #namebuttimg {
+      margin-top: 50px;
+  }
+
+  #namebutt {
+      margin-right: 10px;
+  }
+
+  button      {
+  height: 30px;
+  width: 50px;
+  font-size: 9px;
+  padding: 3px;
+}
+}
