@@ -26,6 +26,7 @@ body {
   filter: blur(2rem);
   animation: pulse_3011 4s infinite;
   z-index: -1;
+  border: double 4px transparent;
 }
 
 .circle1:nth-of-type(1) {
@@ -83,6 +84,7 @@ footer {
   background-color: black;
   margin-bottom: 5px;
 }
+
 
 .btn {
   margin-left: 32%;
