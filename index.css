@@ -82,13 +82,16 @@ body {
 footer {
   text-align: center;
   background-color: black;
-  margin-bottom: 5px;
+  margin: 0;
+  color: rgb(158, 115, 6);
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 
 .btn {
-  margin-left: 32%;
-  margin-top: 50px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -104,6 +107,7 @@ footer {
   background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
   background-origin: border-box;
   background-clip: content-box, border-box;
+  margin: 20px auto;
 }
 
 #container-stars {
@@ -260,35 +264,35 @@ strong {
 
 #myname {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 200;
-  font-size: 45px;
+  font-weight: lighter;
+  font-size: 30px;
   color: white;
-  margin-left: 15px;
-  margin-top: 10px;
-  margin-bottom:10px;
   display: flex;
-  text-align: left;
+  text-align: center;
+  margin: 10px auto;
 }
 
 #namebuttimg {
   margin-top: 150px;
   margin-left: 50px;
   margin-right: 50px;
+  text-align: center;
 }
 
 #top-buttons {
   text-align: center;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  margin-top: 5px;
+}
+
+#skillbutts {
+  margin: 15px auto;
 }
 
 div img {
   height: 180px;
   width: 200px;
   border-radius: 50px;
-  margin-right: 20px;
-  margin-top: 20px;
+  text-align: center; 
+  margin: 0 auto;
 }
 
 .spinner {
@@ -323,7 +327,7 @@ div img {
 button {
   cursor: pointer;
   color: #fff;
-  font-size: 17px;
+  font-size: 12px;
   border-radius: 1rem;
   border: none;
   position: relative;
@@ -387,31 +391,28 @@ button:hover{
 h2 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 200;
 }
 
 .pagedesc {
-  margin-left: 15px;
-  margin-right: 20px;
-  color: white;
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(141, 172, 216);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: lighter;
-}
-
-#footerdesc {
-  margin-left: 0;
+  text-align: center;
 }
 
 @media (max-width: 500px) {
   #myname {
-    margin-right: 0;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: 0;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 200;
+  }
+
+  ul {
+    margin-left: 0 auto;
   }
 
   .buttadv {
@@ -420,12 +421,18 @@ h2 {
   }
 
   h2 {
-      font-size: 20px;
+      font-size: 16px;
   }
 
   .btn {
-    margin-left: 40px;
-    width: 14rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 18rem;
+    height: 35px;
+  }
+
+  strong {
+    font-size: 8px;
   }
 
   .spinner {
@@ -434,26 +441,37 @@ h2 {
   }
 
   .pagedesc {
-    font-size: 15px;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
   }      
 
   div img {
       height: 160px;
-      margin-right: 10px;
+      width: 180px;
   }
 
   #namebuttimg {
-      margin-top: 50px;
-  }
-
-  #namebutt {
-      margin-right: 10px;
+    margin-top: 50px;
   }
 
   button      {
-  height: 30px;
-  width: 50px;
-  font-size: 9px;
-  padding: 3px;
-}
+    height: 30px;
+    width: 50px;
+    font-size: 9px;
+    padding: 3px;
+  }
+
+  .buttadv {
+    font-size: 23px;
+  }
+
+  #second-buttons {
+    margin-top: 0px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
 }
