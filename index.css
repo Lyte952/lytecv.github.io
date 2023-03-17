@@ -293,6 +293,24 @@ div img {
   border-radius: 50px;
   text-align: center; 
   margin: 0 auto;
+  animation-name: float;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .spinner {
@@ -407,7 +425,7 @@ h2 {
 
 @media (max-width: 500px) {
   #myname {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 200;
   }
 
@@ -416,12 +434,12 @@ h2 {
   }
 
   .buttadv {
-      font-size: 25px;
+      font-size: 29px;
       margin-top: 50px;
   }
 
   h2 {
-      font-size: 16px;
+      font-size: 20px;
   }
 
   .btn {
@@ -441,7 +459,7 @@ h2 {
   }
 
   .pagedesc {
-    font-size: 12px;
+    font-size: 16px;
     margin-left: 5px;
     margin-right: 5px;
   }      
@@ -471,7 +489,7 @@ h2 {
   }
 
   footer {
-    font-size: 12px;
+    font-size: 16px;
   }
 
 }
