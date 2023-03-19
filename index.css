@@ -1,5 +1,6 @@
 body {
-  background: rgb(2, 2, 46)
+  background: rgb(2, 2, 46);
+  justify-content: center;
 }
 
 #container-stars1 {
@@ -304,7 +305,7 @@ div img {
   }
 
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-20px);
   }
 
   100% {
@@ -312,7 +313,7 @@ div img {
   }
 }
 
-.spinner {
+/*.spinner {
   width: 2.5em;
   height: 2.5em;
   position: absolute;
@@ -332,14 +333,13 @@ div img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+}*/
 
 @keyframes rot55 {
   to {
     transform: rotate(360deg);
   }
 }
-
 
 button {
   cursor: pointer;
@@ -356,8 +356,8 @@ button::after {
   content: '';
   width: 100%;
   height: 100%;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-  filter: blur(15px);
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(255, 142, 249) 17.8%, rgb(10, 182, 194) 100.2% );
+  filter: blur(25px);
   z-index: -1;
   position: absolute;
   left: 0;
@@ -376,7 +376,7 @@ button {
   color: rgb(0, 0, 0);
   border: 1px solid rgb(83, 83, 83);
   padding: 10px;
-  margin: 10px;
+  margin: 8px;
   transform: scale(1);
   transition: 0.2s;
   text-align: center;
@@ -384,7 +384,7 @@ button {
 
 button:hover{
   color: white;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 @keyframes slidernbw {
@@ -415,7 +415,7 @@ h2 {
 .pagedesc {
   margin-left: 150px;
   margin-right: 150px;
-  color: rgb(141, 172, 216);
+  color: rgb(161, 198, 250);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   font-weight: lighter;
@@ -425,7 +425,6 @@ h2 {
 .main {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
 }
 
 .up {
@@ -511,7 +510,7 @@ h2 {
 .card1:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #cc39a4;
+  background-color: #ff57d2;
 }
 
 .card1:hover .instagram {
@@ -546,6 +545,100 @@ h2 {
 
 .card4:hover .discord {
   fill: white;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+.card:root {
+  --card-height: 60vh;
+  --card-width: calc(var(--card-height)/1.5);
+}
+
+.card {
+  background: #152465;
+  max-width: 400px;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgba(255, 247, 0, 0);
+  cursor: pointer;
+  font-family: cursive;
+  margin: 0 auto;
+}
+
+.card:hover {
+  color: #03A9F4;
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+a {
+  color: #212534;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+#second-buttons {
+  margin-top: 20px;
 }
 
 @media (max-width: 500px) {
@@ -606,7 +699,7 @@ h2 {
   }
 
   #second-buttons {
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   footer {
