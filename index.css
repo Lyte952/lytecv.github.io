@@ -1,709 +1,218 @@
 body {
-  background: rgb(2, 2, 46);
-  justify-content: center;
+    text-align: center;
+    background-color: rgb(255, 250, 210);
 }
 
-#container-stars1 {
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transition: 0.5s;
-  backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-}
-
-#glow1 {
-  position: absolute;
-  display: flex;
-  width: 12rem;
-}
-
-.circle1 {
-  width: 100%;
-  height: 30px;
-  filter: blur(2rem);
-  animation: pulse_3011 4s infinite;
-  z-index: -1;
-  border: double 4px transparent;
-}
-
-.circle1:nth-of-type(1) {
-  background: rgba(254, 83, 186, 0.636);
-}
-
-.circle1:nth-of-type(2) {
-  background: rgba(142, 81, 234, 0.704);
-}
-
-.circle1 {
-  background: #FE53BB;
-}
-
-#stars1 {
-  position: relative;
-  background: transparent;
-  width: 200rem;
-  height: 200rem;
-}
-
-#stars1::after {
-  content: "";
-  position: absolute;
-  top: -10rem;
-  left: -100rem;
-  width: 100%;
-  height: 100%;
-  animation: animStarRotate 90s linear infinite;
-}
-
-#stars1::after {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-}
-
-#stars1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -90%;
-  width: 170%;
-  height: 500%;
-  animation: animStar 60s linear infinite;
-}
-
-#stars1::before {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-  opacity: 0.5;
-}
-
-footer {
-  text-align: center;
-  background-color: black;
-  margin: 0;
-  color: rgb(158, 115, 6);
-  text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
-  font-weight: lighter;
-}
-
-
-.btn {
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30rem;
-  height: 3rem;
-  background-size: 300% 300%;
-  backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-  transition: 0.5s;
-  animation: gradient_301 5s ease infinite;
-  border: double 4px transparent;
-  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  margin: 20px auto;
-}
-
-#container-stars {
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transition: 0.5s;
-  backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-}
-
-strong {
-  z-index: 2;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 15px;
-  font-weight: 200;
-  letter-spacing: 5px;
-  color: #FFFFFF;
-  text-shadow: 0 0 4px white;
-}
-
-#glow {
-  position: absolute;
-  display: flex;
-  width: 12rem;
-}
-
-.circle {
-  width: 100%;
-  height: 30px;
-  filter: blur(2rem);
-  animation: pulse_3011 4s infinite;
-  z-index: -1;
-}
-
-.circle:nth-of-type(1) {
-  background: rgba(254, 83, 186, 0.636);
-}
-
-.circle:nth-of-type(2) {
-  background: rgba(142, 81, 234, 0.704);
-}
-
-.btn:hover #container-stars {
-  z-index: 1;
-  background-color: #212121;
-}
-
-.btn:hover {
-  transform: scale(1.1)
-}
-
-.btn:active {
-  border: double 4px #FE53BB;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  animation: none;
-}
-
-.btn:active .circle {
-  background: #FE53BB;
-}
-
-#stars {
-  position: relative;
-  background: transparent;
-  width: 200rem;
-  height: 200rem;
-}
-
-#stars::after {
-  content: "";
-  position: absolute;
-  top: -10rem;
-  left: -100rem;
-  width: 100%;
-  height: 100%;
-  animation: animStarRotate 90s linear infinite;
-}
-
-#stars::after {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-}
-
-#stars::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 170%;
-  height: 500%;
-  animation: animStar 60s linear infinite;
-}
-
-#stars::before {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-  opacity: 0.5;
-}
-
-@keyframes animStar {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(-135rem);
-  }
-}
-
-@keyframes animStarRotate {
-  from {
-    transform: rotate(360deg);
-  }
-
-  to {
-    transform: rotate(0);
-  }
-}
-
-@keyframes gradient_301 {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes pulse_3011 {
-  0% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
-
-#myname {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: lighter;
-  font-size: 30px;
-  color: white;
-  display: flex;
-  text-align: center;
-  margin: 10px auto;
-}
-
-#namebuttimg {
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-  text-align: center;
-}
-
-#top-buttons {
-  text-align: center;
-}
-
-#skillbutts {
-  margin: 15px auto;
-}
-
-div img {
-  height: 180px;
-  width: 200px;
-  border-radius: 50px;
-  text-align: center; 
-  margin: 0 auto;
-  animation-name: float;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/*.spinner {
-  width: 2.5em;
-  height: 2.5em;
-  position: absolute;
-  cursor: not-allowed;
-  border-radius: 50%;
-  border: 2px solid #444;
-  box-shadow: -10px -10px 10px #6359f8, 0px -10px 10px 0px #9c32e2, 10px -10px 10px #f36896, 10px 0 10px #ff0b0b, 10px 10px 10px 0px#ff5500, 0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700;
-  animation: rot55 0.7s linear infinite;
-}
-
-.spinnerin {
-  border: 2px solid #444;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}*/
-
-@keyframes rot55 {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  cursor: pointer;
-  color: #fff;
-  font-size: 12px;
-  border-radius: 1rem;
-  border: none;
-  position: relative;
-  background: #100720;
-  transition: 0.1s;
-}
-
-button::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(255, 142, 249) 17.8%, rgb(10, 182, 194) 100.2% );
-  filter: blur(25px);
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-button:active {
-  transform: scale(0.9) rotate(3deg);
-  background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
-  transform: scale(1);
-}
-button {
-  border-radius: 5px;
-  background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
-  animation: slidernbw 5s linear infinite;
-  color: rgb(0, 0, 0);
-  border: 1px solid rgb(83, 83, 83);
-  padding: 10px;
-  margin: 8px;
-  transform: scale(1);
-  transition: 0.2s;
-  text-align: center;
-}
-
-button:hover{
-  color: white;
-  transform: scale(1.1);
-}
-
-@keyframes slidernbw {
-  to {
-   background-position: 20vw;
-  }
- }
-
-.buttadv {
-  text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: normal;
-  font-size: 45px;
-  margin-top: 200px;
-  background: linear-gradient(90deg, #156983 20%, #bea748 50%, #e6274d 75%, #156983 50%);
-  animation: slidernbw 2s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: rgb(114, 114, 114);
 }
 
 h2 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: white;
-  font-size: 30px;
-  font-weight: 200;
+    font-weight: 300;
+}
+
+button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    margin: 6px;
+    color: rgb(147, 147, 147);
+    border: 1px solid transparent;
+    background-color: transparent;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+button:hover {
+    border-bottom: 1px solid black;
+    transform: scale(1.1);
+}
+
+.first-card {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(228, 226, 226);
+    border-radius: 20px;
+    color: rgb(147, 147, 147);
+    font-size: xx-large;
+    font-weight: 200;
+}
+
+.second-card {
+    border-radius: 20px;
+    background-color: rgb(203, 247, 249);
+}
+
+.third-card {
+    border-radius: 20px;
+    background-color: rgb(203, 203, 255);
+}
+
+.fourth-card {
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+#codepen-logo {
+    height: 30px;
+    width: 30px;
 }
 
 .pagedesc {
-  margin-left: 150px;
-  margin-right: 150px;
-  color: rgb(161, 198, 250);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
-  font-weight: lighter;
-  text-align: center;
+    color: rgb(147, 147, 147);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+}
+
+div img {
+    height: 300px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+.buttadv {
+    font-weight: 200;
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-}
-
-.up {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.down {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.card1 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: white;
-  border-radius: 90px 5px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
-
-.instagram {
-  margin-top: 1.5em;
-  margin-left: 1.5em;
-  fill: #cc39a4;
-}
-
-.card2 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: white;
-  border-radius: 5px 90px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
-
-.twitter {
-  margin-top: 1.5em;
-  margin-left: -1.9em;
-  fill: #03A9F4;
-}
-
-.card3 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: white;
-  border-radius: 5px 5px 5px 90px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
-
-.github {
-  margin-top: -.6em;
-  margin-left: 1.2em;
-}
-
-.card4 {
-  width: 90px;
-  height: 90px;
-  outline: none;
-  border: none;
-  background: white;
-  border-radius: 5px 5px 90px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: .2s ease-in-out;
-}
-
-.discord {
-  margin-top: -.9em;
-  margin-left: -1.2em;
-  fill: #8c9eff;
-}
-
-.card1:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: #ff57d2;
-}
-
-.card1:hover .instagram {
-  fill: white;
-}
-
-.card2:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: #03A9F4;
-}
-
-.card2:hover .twitter {
-  fill: white;
-}
-
-.card3:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: black;
-}
-
-.card3:hover .github {
-  fill: white;
-}
-
-.card4:hover {
-  cursor: pointer;
-  scale: 1.1;
-  background-color: #8c9eff;
-}
-
-.card4:hover .discord {
-  fill: white;
-}
-
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
-.card:root {
-  --card-height: 60vh;
-  --card-width: calc(var(--card-height)/1.5);
-}
-
-.card {
-  background: #152465;
-  max-width: 400px;
-  width: var(--card-width);
-  height: var(--card-height);
-  padding: 3px;
-  position: relative;
-  border-radius: 6px;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  font-size: 1.5em;
-  color: rgba(255, 247, 0, 0);
-  cursor: pointer;
-  font-family: cursive;
-  margin: 0 auto;
-}
-
-.card:hover {
-  color: #03A9F4;
-  transition: color 1s;
-}
-.card:hover:before, .card:hover:after {
-  animation: none;
-  opacity: 0;
-}
-
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-}
-
-.card::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
-    opacity: 1;
-  transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
+    display: flex;
+    flex-direction: column;
   }
-  100% {
-    --rotate: 360deg;
-  }
-}
-
-a {
-  color: #212534;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-weight: bold;
-  margin-top: 2rem;
-}
-
-#second-buttons {
-  margin-top: 20px;
-}
-
-@media (max-width: 500px) {
-  #myname {
-    font-size: 22px;
-    font-weight: 200;
-  }
-
-  .buttadv {
-      font-size: 29px;
-      margin-top: 50px;
-  }
-
-  h2 {
-      font-size: 20px;
-  }
-
-  .btn {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 18rem;
-    height: 35px;
-  }
-
-  strong {
-    font-size: 8px;
-  }
-
-  .spinner {
-      width: 2em;
-      height: 2em;
-  }
-
-  .pagedesc {
-    font-size: 16px;
-    margin-left: 5px;
-    margin-right: 5px;
-  }      
-
-  div img {
-      height: 160px;
-      width: 180px;
-  }
-
-  #namebuttimg {
+  
+  .up {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 50px;
   }
-
-  button      {
-    height: 30px;
-    width: 50px;
-    font-size: 9px;
-    padding: 3px;
+  
+  .down {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
-
-  .buttadv {
-    font-size: 23px;
+  
+  .card1 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 90px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
   }
-
-  #second-buttons {
-    margin-top: 10px;
+  
+  .instagram {
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    fill: #cc39a4;
   }
-
-  footer {
-    font-size: 16px;
+  
+  .card2 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
   }
-
+  
+  .twitter {
+    margin-top: 1.5em;
+    margin-left: -1.9em;
+    fill: #03A9F4;
+  }
+  
+  .card3 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .github {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+  }
+  
+  .card4 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 90px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+  }
+  
+  .discord {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #8c9eff;
+  }
+  
+  .card1:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #ff57d2;
+    border: none;
+  }
+  
+  .card1:hover .instagram {
+    fill: white;
+  }
+  
+  .card2:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #03A9F4;
+    border: none;
+  }
+  
+  .card2:hover .twitter {
+    fill: white;
+  }
+  
+  .card3:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: black;
+    border: none;
 }
+  
+  .card3:hover .github {
+    fill: white;
+  }
+  
+  .card4:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #8c9eff;
+    border: none;
+  }
+  
+  .card4:hover .discord {
+    fill: white;
+  }
+
+footer {
+    text-align: center;
+    background-color: rgb(49, 49, 49);
+    margin: 0;
+    color: rgb(158, 115, 6);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    border-radius: 20px;
+  }
