@@ -34,10 +34,10 @@ button:hover {
 
 .first-card {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(255, 217, 217);
     border-radius: 20px;
     border: 1px solid rgb(140, 140, 140);
-    color: rgb(147, 147, 147);
+    color: rgb(140, 140, 140);
     font-size: xx-large;
     font-weight: 200;
 }
@@ -54,10 +54,27 @@ button:hover {
     border: 1px solid rgb(140, 140, 140);
 }
 
+.fifth-card {
+    border: 1px solid rgb(140, 140, 140);
+    border-radius: 20px;
+    background-color: rgb(199, 240, 255);
+}
+
+.sixth-card {
+    border: 1px solid rgb(140, 140, 140);
+    border-radius: 20px;
+    background-color: rgb(242, 255, 159)
+}
+
+.seventh-card {
+    border-radius: 20px;
+    border: 1px solid rgb(140, 140, 140);
+    background-color: rgb(255, 222, 249);
+}
+
 .fourth-card {
     border-radius: 20px;
     border: 1px solid black;
-    border: 1px solid rgb(140, 140, 140);
 }
 
 #codepen-logo {
